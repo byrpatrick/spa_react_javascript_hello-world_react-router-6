@@ -31,7 +31,6 @@ export const AdminPage = () => {
       isMounted = false;
     };
   }, []);
-
   return (
     <PageLayout>
       <div className="content-layout">

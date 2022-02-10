@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 export const NavBarBrand = () => {
   return (
     <div className="nav-bar__brand">
-      <NavLink to="/">
+      <NavLink to="/" exact>
         <img
           className="nav-bar__logo"
           src="https://cdn.auth0.com/blog/hub/code-samples/hello-world/auth0-logo.svg"

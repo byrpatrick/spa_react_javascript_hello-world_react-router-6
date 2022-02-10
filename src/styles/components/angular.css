@@ -31,3 +31,16 @@ app-page-loader {
   height: 100%;
   width: 100%;
 }
+
+app-mobile-nav-bar {
+  width: 100%;
+}
+
+app-mobile-nav-bar-tab {
+  width: 100%;
+}
+
+app-mobile-nav-bar-brand {
+  flex: 1;
+}
+
