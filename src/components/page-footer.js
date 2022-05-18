@@ -1,7 +1,7 @@
 import React from "react";
-import { FooterHyperlink } from "./footer-hyperlink";
+import { PageFooterHyperlink } from "./page-footer-hyperlink";
 
-export const Footer = () => {
+export const PageFooter = () => {
   const resourceList = [
     {
       path: "https://auth0.com/why-auth0/",
@@ -28,31 +28,30 @@ export const Footer = () => {
           <div className="footer-info__message">
             <p className="footer-message__headline">
               <span>This sample application is brought to you by&nbsp;</span>
-              <FooterHyperlink path="https://auth0.com/">Auth0</FooterHyperlink>
+              <PageFooterHyperlink path="https://auth0.com/">
+                Auth0
+              </PageFooterHyperlink>
             </p>
             <p className="footer-message__description">
-              <FooterHyperlink path="https://auth0.com/docs/quickstarts/">
+              <PageFooterHyperlink path="https://auth0.com/docs/quickstarts/">
                 <span>
                   Securely implement authentication using Auth0 on any stack and
                   any device&nbsp;
                 </span>
                 <u>in less than 10 minutes</u>
-              </FooterHyperlink>
+              </PageFooterHyperlink>
             </p>
           </div>
           <div className="footer-info__button">
-            <button
+            <a
+              id="create-account-button"
               className="button button--secondary"
-              onClick={() =>
-                window.open(
-                  "https://auth0.com/signup",
-                  "_blank",
-                  "noopener noreferrer"
-                )
-              }
+              href="https://auth0.com/signup"
+              target="_blank"
+              rel="noreferrer noopener"
             >
               Create Free Auth0 Account
-            </button>
+            </a>
           </div>
           <div className="footer-info__resource-list">
             {resourceList.map((resource) => (
@@ -60,9 +59,9 @@ export const Footer = () => {
                 key={resource.path}
                 className="footer-info__resource-list-item"
               >
-                <FooterHyperlink path={resource.path}>
+                <PageFooterHyperlink path={resource.path}>
                   {resource.label}
-                </FooterHyperlink>
+                </PageFooterHyperlink>
               </div>
             ))}
           </div>
@@ -76,9 +75,9 @@ export const Footer = () => {
               width="20"
               height="22.22"
             />
-            <FooterHyperlink path="https://auth0.com/">
+            <PageFooterHyperlink path="https://auth0.com/">
               Auth0 Inc
-            </FooterHyperlink>
+            </PageFooterHyperlink>
           </div>
         </div>
       </div>
