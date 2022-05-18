@@ -1,31 +1,23 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
-import { Footer } from "./components/footer";
-import { MobileNavBar } from "./components/mobile-nav-bar";
-import { NavBar } from "./components/nav-bar";
-import { AdminPage } from "./pages/admin";
-import { Home } from "./pages/home";
-import { NotFound } from "./pages/not-found";
-import { Profile } from "./pages/profile";
-import { ProtectedPage } from "./pages/protected";
-import { PublicPage } from "./pages/public";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { AdminPage } from "./pages/admin-page";
+import { HomePage } from "./pages/home-page";
+import { NotFoundPage } from "./pages/not-found-page";
+import { ProfilePage } from "./pages/profile-page";
+import { ProtectedPage } from "./pages/protected-page";
+import { PublicPage } from "./pages/public-page";
 
 export const App = () => {
   return (
-    <div className="page-layout">
-      <NavBar />
-      <MobileNavBar />
-      <div className="page-layout__content">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/public" element={<PublicPage />} />
-          <Route path="/protected" element={<ProtectedPage />} />
-          <Route path="/admin" element={<AdminPage />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </div>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/public" element={<PublicPage />} />
+        <Route path="/protected" element={<ProtectedPage />} />
+        <Route path="/admin" element={<AdminPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 };

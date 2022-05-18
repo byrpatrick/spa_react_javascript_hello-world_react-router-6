@@ -14,7 +14,7 @@ export const getPublicResource = async () => {
   const { data, error } = await callExternalApi({ config });
 
   return {
-    data: data || null,
+    data: data ? data : null,
     error,
   };
 };
@@ -31,7 +31,7 @@ export const getProtectedResource = async () => {
   const { data, error } = await callExternalApi({ config });
 
   return {
-    data: data || null,
+    data: data ? data : null,
     error,
   };
 };
@@ -48,7 +48,7 @@ export const getAdminResource = async () => {
   const { data, error } = await callExternalApi({ config });
 
   return {
-    data: data || null,
+    data: data ? data : null,
     error,
   };
 };
